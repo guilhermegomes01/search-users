@@ -41,7 +41,9 @@ searchUser.addEventListener('keypress', function(e) {
 })
 
 btnSearch.addEventListener('click', function(e) {
-    console.log(e);
+    e.preventDefault();
+    resultUsers.innerHTML = "";
+    searchUsers();
 })
 
 function searchUsers() {
