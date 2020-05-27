@@ -1,0 +1,46 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    min-height: 350px;
+}
+
+.result-statistics > li{
+    line-height: 40px;
+}
+
+.col-preloader {
+    height: 350px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.with-content, .notFoundUsers {
+    display: none;
+}
+
+.user-information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.img-user {
+    border-radius: 50%;
+    margin-right: 10px;
+}

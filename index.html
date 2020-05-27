@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesquisa de Usuários</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h1>Pesquisa de Usuários</h1>
+        </div>
+      </div>
+      <div class="row">
+        <form action="" class="col s12">
+          <div class="row input-section">
+            <div class="input-field col s8 m10">
+              <input
+                placeholder="Digite o nome do usuário"
+                id="searchUser"
+                type="text"
+              />
+              <label for="searchUser">Buscar</label>
+            </div>
+            <div class="col s4 m2 search-section">
+              <button class="waves-effect waves-light btn btnSearch disabled">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row result">
+        <h2 class="notFoundUsers">Nenhum resultado encontrado</h2>
+        <div class="col s12 col-preloader">
+          <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m8">
+          <div class="with-content">
+            <h2 class="usersFound">Usuários encontrados</h2>
+            <div class="col s12">
+              <ul class="result-users"></ul>
+            </div>
+          </div>
+          <div class="without-content">
+            <h2>Nenhum usuário filtrado</h2>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="with-content">
+            <h2>Estatísticas</h2>
+            <div class="col s12">
+              <ul class="result-statistics">
+                <li>Sexo masculino: <span class="male">0</span></li>
+                <li>Sexo feminino: <span class="female">0</span></li>
+                <li>Soma das idades: <span class="sumAges">0</span></li>
+                <li>Média das idades: <span class="averageAges">0</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="without-content">
+            <h2>Nada a ser exibido</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
