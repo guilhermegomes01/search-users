@@ -34,13 +34,7 @@ h2 {
     display: none;
 }
 
-.user-information {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.img-user {
-    border-radius: 50%;
-    margin-right: 10px;
+.collection.with-header .collection-header {
+    background-color: #26a69a;
+    color: #fff;
 }

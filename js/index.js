@@ -56,11 +56,15 @@ function searchUsers() {
         let femaleCount = 0;
         let totalAges = [];
 
+        const headerCollection = document.createElement('li')
+        headerCollection.classList.add('collection-header')
+        resultUsers.appendChild(headerCollection)
+
         const foundUsers = results.filter(({ name: { first, last } }) => {
             const inputValue = searchUser.value.toLowerCase();
             return first.toLowerCase().includes(inputValue) || last.toLowerCase().includes(inputValue)
         });
-        console.log(foundUsers.length)
+        
         switch(foundUsers.length) {
             case 0:
                 withContent.forEach(content => content.style.display = 'none')
@@ -68,11 +72,11 @@ function searchUsers() {
                 notFoundUsers.style.display = "block";
                 break;
             case 1:
-                usersFound.innerHTML = `${foundUsers.length} usuário encontrado`;
+                headerCollection.innerHTML = `<h2>${foundUsers.length} usuário encontrado</h2>`;
                 fillContent(maleCount, femaleCount, totalAges, foundUsers)
                 break;
             default:
-                usersFound.innerHTML = `${foundUsers.length} usuários encontrados`;
+                headerCollection.innerHTML = `<h2>${foundUsers.length} usuários encontrados</h2>`;
                 fillContent(maleCount, femaleCount, totalAges, foundUsers)
                 break;
         }
@@ -86,15 +90,21 @@ function fillContent(maleCount, femaleCount, totalAges, foundUsers) {
         const li = document.createElement('li');
         const img = document.createElement('img');
         const span = document.createElement('span')
+        const ageParagraph = document.createElement('p')
 
-        li.classList.add('user-information')
-        img.classList.add('img-user')
+        li.classList.add('collection-item')
+        li.classList.add('avatar')
+        img.classList.add('circle')
+        span.classList.add('title')
+
         img.src = picture.thumbnail
-        span.innerHTML = `${name.first} ${name.last}, ${dob.age} anos`
+        span.innerHTML = `${name.first} ${name.last}`
+        ageParagraph.innerHTML = `${dob.age} anos`
         
         resultUsers.appendChild(li);
         li.appendChild(img)
         li.appendChild(span)
+        li.appendChild(ageParagraph)
 
         totalAges = [...totalAges, dob.age]
 
