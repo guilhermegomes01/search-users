@@ -107,7 +107,7 @@ function fillContent(maleCount, femaleCount, totalAges, foundUsers) {
     female.innerHTML = `${femaleCount} pessoas`
 
     sumAges.innerHTML = `${totalAges.reduce(sumFunction)} anos`
-    averageAges.innerHTML = `${totalAges.reduce(sumFunction)/totalAges.length} anos`
+    averageAges.innerHTML = `${(totalAges.reduce(sumFunction)/totalAges.length).toFixed(2)} anos`
 
     preloader.style.display = "none";
     withContent.forEach(content => content.style.display = "block");
