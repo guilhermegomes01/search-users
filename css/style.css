@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto Slab';
+}
+
 h1 {
     font-size: 40px;
     text-align: center;
@@ -6,6 +10,10 @@ h1 {
 h2 {
     font-size: 28px;
     text-align: center;
+}
+
+button {
+    font-family: 'Fira Code';
 }
 
 .input-section {
